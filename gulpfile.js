@@ -16,10 +16,10 @@ function bs() {
 };
 
 function minCSS() {
-  return src("src/css/*.css")
+  return src("./css/*.css")
   .pipe(rename({suffix: ".min"}))
   .pipe(cleanCSS())
-  .pipe(dest("app/css"));
+  .pipe(dest("./css"));
 };
 function serveSass() {
   return src("./sass/*.sass")
