@@ -388,20 +388,19 @@ body {
   font-size: 1rem;
   color: #E3B873;
   text-transform: uppercase;
-  margin-right: 6.6rem; }
+  margin-right: 4.2rem; }
 
 .nav__item {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  margin-right: 2.5rem;
+  margin-right: 2.6rem;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #E3B873; }
 
 .phone {
-  color: #E3B873;
-  margin-left: 8.57rem; }
+  color: #E3B873; }
 
 .contacts__phone {
   margin-right: 45px; }
