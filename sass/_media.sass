@@ -27,7 +27,21 @@
       margin-left: 0
     &__button
       margin-right: 0
-@media screen and ( max-width:760px  )
+@media screen and ( max-width: 991px  )
+  .button
+    &:hover
+      cursor: default
+    &--primary
+      &:hover
+        background-color: $primary
+        color: $light
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
+        border: 1px solid $primary
+    &--outline
+      &:hover
+        border: 1px solid $light
+        background-color: transparent
+        color: $light
   .row
     flex-direction: column
     align-items: center
@@ -35,8 +49,12 @@
     &__card
       margin-bottom: 6.28rem
   .design
+    background-color: $dark
     &__card
       margin-bottom: 6.28rem
+    &__section-title
+      color: $light
+      margin-bottom: 2.1rem
   .card
     &__text
       margin-left: 0
@@ -110,6 +128,12 @@
     &__card
       width: 340px
   .card
+    &__image
+      height: 365px
+    &__title
+      font-family: 'Yeseva One', cursive
+      font-size: 1.24rem
+      margin-left: 0.55rem
     &__text
       max-width: 22.5rem
       margin-top: -12.3rem
@@ -126,10 +150,6 @@
       font-size: 1.25rem
       line-height: 135.84%
   .design
-    background-color: $dark
-    &__section-title
-      color: $light
-      margin-bottom: 2.1rem
     &__card
       width: 340px
       margin-bottom: 6.68rem
@@ -151,3 +171,23 @@
         display: none
       &__item--seven:nth-child(7)::after
         content: '...'  
+@media screen and ( max-width: 361px  )
+  .header
+    padding: 20px 0
+    & .container
+      margin: 0 10px
+  .menu
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  .hero
+    &__button
+      font-size: 1.1rem
+      display: block
+      min-width: 100%
+      margin-bottom: 1.85rem
+  .col
+    margin: 0 auto
+  .card
+    &__image
+      width: 90%

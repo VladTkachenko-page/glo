@@ -371,6 +371,10 @@ img {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One', cursiv; }
+    .section-title__heading {
+      font-family: 'Yeseva One', cursiv;
+      font-size: 1.43rem;
+      line-height: 2rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -531,6 +535,10 @@ img {
 .col {
   flex-basis: 31.66%; }
 
+.card__image {
+  width: 392px;
+  height: 421px; }
+
 .card__text {
   position: relative;
   max-width: 23.6rem;
@@ -570,7 +578,7 @@ img {
   margin-bottom: 2.2rem; }
 
 .design__card__pricetag {
-  padding: 1.114rem 5.9rem 1.114rem 2.3rem; }
+  padding: 1.014rem 5.9rem 1.104rem 2.3rem; }
 
 .design .card__list {
   padding: 0 0 0 1.6rem; }
@@ -608,7 +616,7 @@ img {
   margin-left: 0.25rem; }
 
 .card__list {
-  padding: 0 0 0 1.5rem;
+  padding: 0 0 0 1.4rem;
   margin: 0;
   margin-bottom: 2.3rem;
   font-size: 1.07rem;
@@ -623,8 +631,7 @@ img {
   font-size: 1.29rem;
   text-transform: uppercase;
   background-color: #E3B873;
-  color: #ffffff;
-  padding: 1.214rem 2.8rem; }
+  color: #ffffff; }
 
 @media screen and (max-width: 1410px) {
   .logo {
@@ -654,14 +661,30 @@ img {
   .contacts__button {
     margin-right: 0; } }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 991px) {
+  .button:hover {
+    cursor: default; }
+  .button--primary:hover {
+    background-color: #E3B873;
+    color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border: 1px solid #E3B873; }
+  .button--outline:hover {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff; }
   .row {
     flex-direction: column;
     align-items: center; }
   .types__card {
     margin-bottom: 6.28rem; }
-  .design__card {
-    margin-bottom: 6.28rem; }
+  .design {
+    background-color: #131313; }
+    .design__card {
+      margin-bottom: 6.28rem; }
+    .design__section-title {
+      color: #ffffff;
+      margin-bottom: 2.1rem; }
   .card__text {
     margin-left: 0; } }
 
@@ -732,6 +755,12 @@ img {
     margin-bottom: 3.5rem; }
   .types__card {
     width: 340px; }
+  .card__image {
+    height: 365px; }
+  .card__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.24rem;
+    margin-left: 0.55rem; }
   .card__text {
     max-width: 22.5rem;
     margin-top: -12.3rem; }
@@ -746,28 +775,42 @@ img {
     max-width: 24.85rem;
     font-size: 1.25rem;
     line-height: 135.84%; }
-  .design {
-    background-color: #131313; }
-    .design__section-title {
-      color: #ffffff;
-      margin-bottom: 2.1rem; }
-    .design__card {
-      width: 340px;
-      margin-bottom: 6.68rem; }
-    .design .card__title {
-      font-size: 1.22rem;
-      line-height: 138.6%;
-      margin-top: 1px;
-      margin-bottom: 0.45rem;
-      margin-left: 0.55rem; }
-    .design .card__text {
-      padding: 1.74rem 2.2rem; }
-    .design .card__list {
-      padding: 0 0 0 1.8rem; }
-    .design .card__pricetag {
-      padding: 0.914rem 3.7rem 0.914rem 3.8rem;
-      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
-    .design .card__item:nth-child(n+8) {
-      display: none; }
-    .design .card__item--seven:nth-child(7)::after {
-      content: '...'; } }
+  .design__card {
+    width: 340px;
+    margin-bottom: 6.68rem; }
+  .design .card__title {
+    font-size: 1.22rem;
+    line-height: 138.6%;
+    margin-top: 1px;
+    margin-bottom: 0.45rem;
+    margin-left: 0.55rem; }
+  .design .card__text {
+    padding: 1.74rem 2.2rem; }
+  .design .card__list {
+    padding: 0 0 0 1.8rem; }
+  .design .card__pricetag {
+    padding: 0.914rem 3.7rem 0.914rem 3.8rem;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
+  .design .card__item:nth-child(n+8) {
+    display: none; }
+  .design .card__item--seven:nth-child(7)::after {
+    content: '...'; } }
+
+@media screen and (max-width: 361px) {
+  .header {
+    padding: 20px 0; }
+    .header .container {
+      margin: 0 10px; }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .hero__button {
+    font-size: 1.1rem;
+    display: block;
+    min-width: 100%;
+    margin-bottom: 1.85rem; }
+  .col {
+    margin: 0 auto; }
+  .card__image {
+    width: 90%; } }
