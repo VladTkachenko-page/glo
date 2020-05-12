@@ -34,6 +34,9 @@
   .types
     &__card
       margin-bottom: 6.28rem
+  .design
+    &__card
+      margin-bottom: 6.28rem
   .card
     &__text
       margin-left: 0
@@ -99,3 +102,52 @@
       margin-bottom: 1.85rem
   .title
       font-size: 1.9rem
+  .section-title__heading
+    font-size: 1.84rem
+  .types
+    &__section-title
+      margin-bottom: 3.5rem
+    &__card
+      width: 340px
+  .card
+    &__text
+      max-width: 22.5rem
+      margin-top: -12.3rem
+    &__list
+      padding: 0 0 0 1.7rem
+      margin-bottom: 1.8rem
+      line-height: 1.9rem
+    &__pricetag
+      bottom: -1.49rem
+      padding: 0.914rem 2.7rem
+  .section-title
+    &__text
+      max-width: 24.85rem
+      font-size: 1.25rem
+      line-height: 135.84%
+  .design
+    background-color: $dark
+    &__section-title
+      color: $light
+      margin-bottom: 2.1rem
+    &__card
+      width: 340px
+      margin-bottom: 6.68rem
+    .card
+      &__title
+        font-size: 1.22rem
+        line-height: 138.6%
+        margin-top: 1px;
+        margin-bottom: 0.45rem;
+        margin-left: 0.55rem;
+      &__text
+        padding: 1.74rem 2.2rem
+      &__list
+        padding: 0 0 0 1.8rem
+      &__pricetag
+        padding: 0.914rem 3.7rem 0.914rem 3.8rem
+        box-shadow: 5px 5px 10px rgba($primary, 0.3)
+      &__item:nth-child(n+8)
+        display: none
+      &__item--seven:nth-child(7)::after
+        content: '...'  
