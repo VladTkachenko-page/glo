@@ -391,6 +391,20 @@ template {
     cursor: pointer;
     margin-right: 0.57rem; }
 
+.scroll-up {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 2.857rem;
+  bottom: 2.857rem;
+  background: url(../img/arrow.svg) center;
+  display: inline-block;
+  z-index: 100;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -418,7 +432,8 @@ img {
     .section-title__heading {
       font-family: 'Yeseva One', cursiv;
       font-size: 1.43rem;
-      line-height: 2rem; }
+      line-height: 2rem;
+      font-weight: 300; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -894,7 +909,10 @@ img {
   .design .card__item:nth-child(n+8) {
     display: none; }
   .design .card__item--seven:nth-child(7)::after {
-    content: '...'; } }
+    content: '...'; }
+  .scroll-up {
+    opacity: 0;
+    visibility: hidden; } }
 
 @media screen and (max-width: 361px) {
   .header {
@@ -910,7 +928,7 @@ img {
     display: block;
     min-width: 100%;
     margin-bottom: 1.85rem; }
-  .col {
-    margin: 0 auto; }
   .card__image {
-    width: 90%; } }
+    padding: 0 2.5rem; }
+  .card__text {
+    margin-left: auto; } }

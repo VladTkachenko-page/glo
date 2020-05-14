@@ -171,6 +171,9 @@
         display: none
       &__item--seven:nth-child(7)::after
         content: '...'  
+  .scroll-up
+    opacity: 0
+    visibility: hidden
 @media screen and ( max-width: 361px  )
   .header
     padding: 20px 0
@@ -186,8 +189,8 @@
       display: block
       min-width: 100%
       margin-bottom: 1.85rem
-  .col
-    margin: 0 auto
   .card
     &__image
-      width: 90%
+      padding: 0 2.5rem
+    &__text
+      margin-left: auto
