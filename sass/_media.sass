@@ -58,6 +58,10 @@
   .card
     &__text
       margin-left: 0
+  .col-55
+    margin-top: 2.728rem
+  .col-40
+    width: 100%
 @media screen and ( max-width: 570px  )
   .contacts
     &__phone
@@ -96,6 +100,17 @@
   .hero
     &__scroll-down
       display: none
+  .modal
+    &__dialog
+      padding: 3.357rem 1.7rem 1.228rem
+    &__title
+      font-size: 1.2rem
+      margin-bottom: 1rem
+    &__input
+      margin-bottom: 0.5rem
+    &__button
+      padding: 1rem
+      
 @media screen and ( max-width: 375px  )
   .header
     padding: 22px 0
@@ -105,6 +120,7 @@
     min-width: 340px
   .hero
     display: block
+    height: 78vh
     &__content
       margin-top: 40px
       margin-left: -10px
@@ -118,10 +134,10 @@
       display: block
       min-width: 28rem
       margin-bottom: 1.85rem
+    &::after
+      display: none
   .title
       font-size: 1.9rem
-  .section-title__heading
-    font-size: 1.84rem
   .types
     &__section-title
       margin-bottom: 3.5rem
@@ -145,10 +161,18 @@
       bottom: -1.49rem
       padding: 0.914rem 2.7rem
   .section-title
-    &__text
+    &__subtitle
       max-width: 24.85rem
       font-size: 1.25rem
       line-height: 135.84%
+    &__heading
+      font-size: 1.84rem
+      &--primary
+        padding-top: 3rem  
+    &__text
+      max-width: 24.85rem
+      font-size: 1.15rem
+      margin-bottom: 2.9rem;
   .design
     &__card
       width: 340px
@@ -174,6 +198,30 @@
   .scroll-up
     opacity: 0
     visibility: hidden
+  .section
+    &--dark
+      padding-top: 0
+      margin: 0 -12px
+    &-title
+      &__word
+        &::after
+          display: none
+  .swiper
+    &-wrapper 
+      margin-bottom: 2rem
+    &-slide
+      img
+        width: 340px
+        height: 203px
+      &__heading
+        font-size: 1.15rem
+      &__text
+        flex-basis: 47%
+      &__value
+        font-size: 1.17rem
+        line-height: 1.628rem
+  .col-55
+    width: 340px
 @media screen and ( max-width: 361px  )
   .header
     padding: 20px 0

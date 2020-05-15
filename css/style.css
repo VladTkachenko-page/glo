@@ -323,7 +323,8 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.93rem;
+  outline: none; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -394,12 +395,11 @@ template {
 .scroll-up {
   display: none;
   position: fixed;
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   right: 2.857rem;
   bottom: 2.857rem;
-  background: url(../img/arrow.svg) center;
-  display: inline-block;
+  background: transparent;
   z-index: 100;
   border: none;
   outline: none;
@@ -409,6 +409,18 @@ template {
   width: 85%;
   max-width: 1256px;
   margin: auto; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 31.66%; }
+  .col-40 {
+    width: 40%; }
+  .col-55 {
+    width: 55%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -425,15 +437,50 @@ img {
 
 .section {
   padding: 60px 0; }
+  .section--dark {
+    padding-top: 9.142rem;
+    background: #131313;
+    color: #ffffff; }
   .section-title {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One', cursiv; }
+    .section-title--left {
+      text-align: left; }
     .section-title__heading {
       font-family: 'Yeseva One', cursiv;
       font-size: 1.43rem;
       line-height: 2rem;
-      font-weight: 300; }
+      font-weight: 300;
+      margin-top: 0; }
+      .section-title__heading--primary {
+        color: #E3B873;
+        font-size: 1.928rem;
+        line-height: 2.642rem;
+        letter-spacing: -0.07em; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      text-transform: none;
+      font-family: 'Futura Book';
+      max-width: 31.57rem;
+      margin-bottom: 3.5rem; }
+    .section-title__subtitle {
+      font-family: 'Futura Book';
+      display: inline-block;
+      text-align: center;
+      max-width: 52.85rem;
+      font-size: 1.42rem;
+      text-transform: none; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 90px;
+        height: 2px;
+        background-color: #E3B873;
+        margin-left: 2rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -503,6 +550,15 @@ img {
     top: 0;
     left: 0;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background: #131313; }
   .hero__content {
     position: relative;
     max-width: 47.85rem;
@@ -529,6 +585,7 @@ img {
     margin-top: -1rem; }
   .hero__scroll-down {
     position: absolute;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -583,16 +640,60 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.swiper-wrapper {
+  margin-bottom: 4.814rem; }
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap; }
+  .swiper-slide__text {
+    flex-basis: 38%;
+    padding-bottom: 2.42rem; }
+  .swiper-slide__heading {
+    font-size: 1.285rem;
+    line-height: 1.78rem;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin: 0;
+    margin-bottom: 0.64rem; }
+  .swiper-slide__value {
+    font-size: 1.07rem;
+    line-height: 1.428rem;
+    font-family: 'Futura Book'; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 9px;
+  height: 9px; }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-color: 42px;
+  width: 42px;
+  height: 14px; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+.swiper-button-prev {
+  left: 0;
+  background: url(../img/arrow-prev.svg) no-repeat center; }
+
+.swiper-button-next {
+  background: url(../img/arrow-next.svg) no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: -1px; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px; }
+
 .types__section-title {
   margin-bottom: 2.2rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 31.66%; }
 
 .card__image {
   width: 392px;
@@ -641,22 +742,6 @@ img {
 
 .design .card__list {
   padding: 0 0 0 1.6rem; }
-
-.section-title__text {
-  font-family: 'Futura Book';
-  display: inline-block;
-  text-align: center;
-  max-width: 52.85rem;
-  font-size: 1.42rem;
-  text-transform: none; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 31.66%; }
 
 .card__text {
   position: relative;
@@ -801,7 +886,11 @@ img {
       color: #ffffff;
       margin-bottom: 2.1rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .col-55 {
+    margin-top: 2.728rem; }
+  .col-40 {
+    width: 100%; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
@@ -838,7 +927,16 @@ img {
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
-    display: none; } }
+    display: none; }
+  .modal__dialog {
+    padding: 3.357rem 1.7rem 1.228rem; }
+  .modal__title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem; }
+  .modal__input {
+    margin-bottom: 0.5rem; }
+  .modal__button {
+    padding: 1rem; } }
 
 @media screen and (max-width: 375px) {
   .header {
@@ -848,7 +946,8 @@ img {
   .menu {
     min-width: 340px; }
   .hero {
-    display: block; }
+    display: block;
+    height: 78vh; }
     .hero__content {
       margin-top: 40px;
       margin-left: -10px;
@@ -862,10 +961,10 @@ img {
       display: block;
       min-width: 28rem;
       margin-bottom: 1.85rem; }
+    .hero::after {
+      display: none; }
   .title {
     font-size: 1.9rem; }
-  .section-title__heading {
-    font-size: 1.84rem; }
   .types__section-title {
     margin-bottom: 3.5rem; }
   .types__card {
@@ -886,10 +985,18 @@ img {
   .card__pricetag {
     bottom: -1.49rem;
     padding: 0.914rem 2.7rem; }
-  .section-title__text {
+  .section-title__subtitle {
     max-width: 24.85rem;
     font-size: 1.25rem;
     line-height: 135.84%; }
+  .section-title__heading {
+    font-size: 1.84rem; }
+    .section-title__heading--primary {
+      padding-top: 3rem; }
+  .section-title__text {
+    max-width: 24.85rem;
+    font-size: 1.15rem;
+    margin-bottom: 2.9rem; }
   .design__card {
     width: 340px;
     margin-bottom: 6.68rem; }
@@ -912,7 +1019,26 @@ img {
     content: '...'; }
   .scroll-up {
     opacity: 0;
-    visibility: hidden; } }
+    visibility: hidden; }
+  .section--dark {
+    padding-top: 0;
+    margin: 0 -12px; }
+  .section-title__word::after {
+    display: none; }
+  .swiper-wrapper {
+    margin-bottom: 2rem; }
+  .swiper-slide img {
+    width: 340px;
+    height: 203px; }
+  .swiper-slide__heading {
+    font-size: 1.15rem; }
+  .swiper-slide__text {
+    flex-basis: 47%; }
+  .swiper-slide__value {
+    font-size: 1.17rem;
+    line-height: 1.628rem; }
+  .col-55 {
+    width: 340px; } }
 
 @media screen and (max-width: 361px) {
   .header {
