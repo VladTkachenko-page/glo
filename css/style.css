@@ -406,7 +406,7 @@ template {
   cursor: pointer; }
 
 .container {
-  width: 85%;
+  width: 85.5%;
   max-width: 1256px;
   margin: auto; }
 
@@ -421,6 +421,10 @@ template {
     width: 40%; }
   .col-55 {
     width: 55%; }
+  .col-38 {
+    width: 38%; }
+  .col-62 {
+    width: 62%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -553,7 +557,7 @@ img {
   .hero::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     right: 0;
     width: 100%;
@@ -674,7 +678,8 @@ img {
   top: auto;
   background-color: 42px;
   width: 42px;
-  height: 14px; }
+  height: 14px;
+  outline: none; }
   .swiper-button-prev::after, .swiper-button-next::after {
     display: none; }
 
@@ -734,14 +739,14 @@ img {
   color: #ffffff;
   padding: 1.214rem 2.8rem; }
 
-.design__section-title {
-  margin-bottom: 2.2rem; }
-
-.design__card__pricetag {
-  padding: 1.014rem 5.9rem 1.104rem 2.3rem; }
-
-.design .card__list {
-  padding: 0 0 0 1.6rem; }
+.design {
+  margin-bottom: -35rem; }
+  .design__section-title {
+    margin-bottom: 2.2rem; }
+  .design__card__pricetag {
+    padding: 1.014rem 5.9rem 1.104rem 2.3rem; }
+  .design .card__list {
+    padding: 0 0 0 1.6rem; }
 
 .card__text {
   position: relative;
@@ -776,6 +781,72 @@ img {
   text-transform: uppercase;
   background-color: #E3B873;
   color: #ffffff; }
+
+.steps {
+  padding-top: 35rem; }
+  .steps__section-title {
+    margin-top: -5.8rem;
+    margin-bottom: 6.242rem; }
+    .steps__section-title__word::after {
+      margin-left: 7.1rem; }
+    .steps__section-title-up {
+      text-transform: uppercase;
+      font-family: 'Futura Demi';
+      font-size: 1.05rem;
+      line-height: 1.5rem; }
+  .steps__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1.9rem;
+    margin-bottom: 0.8rem; }
+    .steps__menu__item {
+      min-width: 7rem;
+      cursor: pointer;
+      opacity: 0.3;
+      margin-right: 5rem;
+      margin-bottom: 3rem; }
+      .steps__menu__item:nth-child(2) {
+        margin-right: 8rem; }
+      .steps__menu__item:nth-child(3) {
+        margin-right: 0rem; }
+      .steps__menu__item:nth-child(4) {
+        margin-right: 11rem; }
+      .steps__menu__item:nth-child(5) {
+        margin-right: 11rem; }
+      .steps__menu__item:nth-child(6) {
+        margin-right: 0rem;
+        max-width: 7rem; }
+    .steps__menu__number {
+      font-family: 'Yeseva One', cursive;
+      font-size: 1.071rem;
+      border-bottom: 1px solid #e3b873; }
+    .steps__menu__text {
+      display: block;
+      margin-top: 0.914rem;
+      font-size: 1.071rem;
+      line-height: 1.285rem;
+      max-width: 10rem; }
+  .steps_swiper-container img {
+    width: 765px;
+    height: 376px; }
+  .steps__swiper-slide__text {
+    flex-basis: 70%;
+    font-family: 'Futura Book';
+    line-height: 1.95rem;
+    padding-bottom: 0; }
+  .steps__swiper-slide__count {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.285rem;
+    line-height: 1.785rem; }
+  .steps__swiper-slide__heading {
+    font-size: 1.071rem;
+    margin-top: 0.871rem;
+    max-width: 11.42rem; }
+
+.active {
+  opacity: 1; }
 
 .modal {
   opacity: 0;
@@ -862,6 +933,8 @@ img {
     margin-right: 0; } }
 
 @media screen and (max-width: 991px) {
+  .hero::after {
+    display: none; }
   .button:hover {
     cursor: default; }
   .button--primary:hover {
@@ -888,7 +961,8 @@ img {
   .card__text {
     margin-left: 0; }
   .col-55 {
-    margin-top: 2.728rem; }
+    margin-top: 2.728rem;
+    width: 100%; }
   .col-40 {
     width: 100%; } }
 
@@ -961,8 +1035,6 @@ img {
       display: block;
       min-width: 28rem;
       margin-bottom: 1.85rem; }
-    .hero::after {
-      display: none; }
   .title {
     font-size: 1.9rem; }
   .types__section-title {
@@ -1036,9 +1108,7 @@ img {
     flex-basis: 47%; }
   .swiper-slide__value {
     font-size: 1.17rem;
-    line-height: 1.628rem; }
-  .col-55 {
-    width: 340px; } }
+    line-height: 1.628rem; } }
 
 @media screen and (max-width: 361px) {
   .header {

@@ -28,6 +28,9 @@
     &__button
       margin-right: 0
 @media screen and ( max-width: 991px  )
+  .hero
+    &::after
+      display: none
   .button
     &:hover
       cursor: default
@@ -60,6 +63,7 @@
       margin-left: 0
   .col-55
     margin-top: 2.728rem
+    width: 100%
   .col-40
     width: 100%
 @media screen and ( max-width: 570px  )
@@ -134,8 +138,6 @@
       display: block
       min-width: 28rem
       margin-bottom: 1.85rem
-    &::after
-      display: none
   .title
       font-size: 1.9rem
   .types
@@ -220,8 +222,6 @@
       &__value
         font-size: 1.17rem
         line-height: 1.628rem
-  .col-55
-    width: 340px
 @media screen and ( max-width: 361px  )
   .header
     padding: 20px 0

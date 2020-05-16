@@ -40,21 +40,66 @@ $(document).ready(function () {
     $('html').animate({scrollTop: $('.control').position().top - 80}, 1000);
   });
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.projects__swiper-pagination',
       type: 'bullets',
     },
+    
   });
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
+  var next = $('.projects__swiper-button-next');
+  var prev = $('.projects__swiper-button-prev');
+  var pbullets = $('.projects__swiper-pagination');
 
-  next.css('left', prev.width() + 15 + bullets.width() + 15);
-  bullets.css('left', prev.width() + 15)
+  next.css('left', prev.width() + 15 + pbullets.width() + 15);
+  pbullets.css('left', prev.width() + 15);
+  
+  var sSwiper = new Swiper ('.steps__swiper-container', {  
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.steps__swiper-pagination',
+      type: 'bullets',
+    },
+    
+  });
+  var ssSwiper = new Swiper ('.steps_swiper-container', {  
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  var sbullets = $('.steps__swiper-pagination');
+  var snext = $('.steps__swiper-button-next');
+  var sprev = $('.steps__swiper-button-prev');
+
+  snext.css('left', sprev.width() + 15 + sbullets.width() + 15);
+  sbullets.css('left', sprev.width() + 15);
+
+  $('.steps__menu__item').on('click', function () {
+    $('.steps__menu__item').removeClass('active');
+    $('.steps__menu__item').addClass('active');
+    const e = $(this).data('index');
+    sSwiper.slideTo(e);
+    ssSwiper.slideTo(e);
+  });
+  ssSwiper.on('slideChange', (function () {
+    const e = ssSwiper.realIndex;
+    $('.steps__menu__item').removeClass('active');
+    $('.steps__menu__item').eq(e).addClass('active');
+  }));
+
+  sSwiper.on('slideChange', function () {
+    $('.steps__swiper-slide__count').text(sSwiper.realIndex + 1 + '/' + (sSwiper.slides.length - 2));
+  });
+  
 });
