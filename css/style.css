@@ -538,6 +538,18 @@ img {
   margin-left: 6rem;
   margin-right: 36px; }
 
+@-webkit-keyframes fadeRight {
+  0% {
+    margin-left: 0; }
+  100% {
+    margin-left: 100px; } }
+
+@keyframes fadeRight {
+  0% {
+    margin-left: 0; }
+  100% {
+    margin-left: 100px; } }
+
 .hero {
   position: relative;
   display: flex;
@@ -703,6 +715,18 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 10px; }
 
+@-webkit-keyframes fadeUp {
+  0% {
+    margin-top: 300px; }
+  100% {
+    margin-top: 0; } }
+
+@keyframes fadeUp {
+  0% {
+    margin-top: 300px; }
+  100% {
+    margin-top: 0; } }
+
 .control {
   margin-top: -27.7rem; }
   .control__section-title {
@@ -781,9 +805,14 @@ img {
       margin-top: 1.1rem;
       justify-content: center; }
 
-.video__play {
-  position: relative;
-  margin: auto; }
+.video {
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
+  .video__play {
+    position: relative;
+    margin: auto; }
 
 .types {
   padding-top: 6rem; }

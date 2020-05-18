@@ -102,4 +102,16 @@ $(document).ready(function () {
     $('.steps__swiper-slide-count').text(sSwiper.realIndex + 1 + '/' + (sSwiper.slides.length - 2));
   });
   
+  new WOW().init();
+
+  const video = new WOW(
+    {
+    boxClass:     'video',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         true        // default
+  }
+  );
+  video.init();
 });
