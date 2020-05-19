@@ -114,4 +114,37 @@ $(document).ready(function () {
   }
   );
   video.init();
+
+  $('.modal__form', '.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  });
+
+  $('[type=tel]').mask('+7(000) 000-00-00');
 });

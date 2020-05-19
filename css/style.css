@@ -391,6 +391,14 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.57rem; }
+  .policy__label--center {
+    justify-content: center; }
+
+.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 .scroll-up {
   display: none;
@@ -514,7 +522,7 @@ img {
   margin-left: -1.6rem; }
 
 .logo {
-  font-family: Futura Demi;
+  font-family: 'Futura Demi';
   font-size: 1rem;
   text-transform: uppercase;
   margin-right: 7.2rem; }
@@ -775,26 +783,28 @@ img {
   .control__label {
     margin-bottom: -3px;
     color: rgba(19, 19, 19, 0.5); }
-  .control__input::-webkit-input-placeholder {
-    font-size: 1.285rem;
-    line-height: 1.714rem;
+  .control__input {
     color: #131313; }
-  .control__input::-moz-placeholder {
-    font-size: 1.285rem;
-    line-height: 1.714rem;
-    color: #131313; }
-  .control__input:-ms-input-placeholder {
-    font-size: 1.285rem;
-    line-height: 1.714rem;
-    color: #131313; }
-  .control__input::-ms-input-placeholder {
-    font-size: 1.285rem;
-    line-height: 1.714rem;
-    color: #131313; }
-  .control__input::placeholder {
-    font-size: 1.285rem;
-    line-height: 1.714rem;
-    color: #131313; }
+    .control__input::-webkit-input-placeholder {
+      font-size: 1.285rem;
+      line-height: 1.714rem;
+      color: #131313; }
+    .control__input::-moz-placeholder {
+      font-size: 1.285rem;
+      line-height: 1.714rem;
+      color: #131313; }
+    .control__input:-ms-input-placeholder {
+      font-size: 1.285rem;
+      line-height: 1.714rem;
+      color: #131313; }
+    .control__input::-ms-input-placeholder {
+      font-size: 1.285rem;
+      line-height: 1.714rem;
+      color: #131313; }
+    .control__input::placeholder {
+      font-size: 1.285rem;
+      line-height: 1.714rem;
+      color: #131313; }
   .control__button {
     padding: 1.2857rem 4.385rem;
     font-size: 1.071rem; }
@@ -903,7 +913,8 @@ img {
   color: #ffffff; }
 
 .steps {
-  padding-top: 35.2rem; }
+  padding-top: 36.2rem;
+  padding-bottom: 30rem; }
   .steps__section-title {
     margin-top: -5.8rem;
     margin-bottom: 6.242rem; }
@@ -971,6 +982,132 @@ img {
 .section-title__word--right::after {
   margin-left: 7.1rem; }
 
+.team {
+  margin-top: -32.7rem; }
+  .team__text {
+    max-width: 40.685rem;
+    margin: auto;
+    margin-bottom: 4.4rem;
+    text-align: center;
+    font-size: 1.428rem;
+    line-height: 2.42rem; }
+    .team__text::before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 0.6rem;
+      width: 55px;
+      height: 2px;
+      background-color: #E3B873;
+      border-radius: 30px; }
+  .team__row {
+    max-width: 78.7rem;
+    margin: auto;
+    margin-bottom: 5.58rem; }
+  .team__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .team__card-image {
+      max-width: 22.5rem;
+      min-height: 25.5rem;
+      margin-top: 4.4rem; }
+    .team__card-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      left: 2px;
+      top: 1.9rem;
+      background-color: #E3B873;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+    .team__card-text {
+      text-align: center;
+      position: relative;
+      width: 68%;
+      margin: 0 auto;
+      margin-top: -5.8rem;
+      padding: 1.29rem 2rem 0.7rem;
+      background-color: #ffffff;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+    .team__card-title {
+      font-family: 'Yeseva One', cursive;
+      font-size: 1.29rem;
+      margin-top: 2px;
+      margin-bottom: 0.6rem;
+      margin-left: 0.25rem; }
+    .team__card-list {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 2.3rem;
+      font-size: 1.27rem;
+      line-height: 1.5rem;
+      color: #959595;
+      list-style-type: none; }
+    .team__card-pricetag {
+      position: absolute;
+      left: 0;
+      bottom: -1.79rem;
+      font-family: 'Yeseva One', cursive;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      background-color: #E3B873;
+      color: #ffffff;
+      width: 100%;
+      padding: 1.114rem 1.7rem; }
+
+.section-title__subtitle--light {
+  max-width: 32rem;
+  line-height: 1.928rem; }
+
+.footer {
+  background: #131313 url(../img/footer-bg.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: 0 12.14rem 0 13.57rem;
+    margin-bottom: 3.714rem;
+    padding: 2.5rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 3.2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -1015,9 +1152,11 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.228rem; }
-    .modal__input:last-of-type {
+    .modal__input-group:last-of-type {
       margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.9rem; }
@@ -1073,7 +1212,7 @@ img {
   .hero::after {
     display: none; }
   .button:hover {
-    cursor: default; }
+    cursor: pointer; }
   .button--primary:hover {
     background-color: #E3B873;
     color: #ffffff;
@@ -1089,7 +1228,8 @@ img {
   .types__card {
     margin-bottom: 6.28rem; }
   .design {
-    background-color: #131313; }
+    background-color: #131313;
+    margin-bottom: 0; }
     .design__card {
       margin-bottom: 6.28rem; }
     .design__section-title {
@@ -1103,7 +1243,17 @@ img {
   .col-40 {
     width: 100%; }
   .steps {
-    display: none; } }
+    display: none; }
+  .team {
+    background-color: #131313;
+    margin-top: -8.7rem; }
+    .team__card {
+      margin-bottom: 3.7rem; }
+    .team__text {
+      color: #ffffff; }
+  .footer__wrap {
+    margin: 0 auto 3rem;
+    max-width: 46.07rem; } }
 
 @media screen and (max-width: 800px) {
   .control__video {
@@ -1177,6 +1327,14 @@ img {
   .modal__button {
     padding: 1rem; } }
 
+@media screen and (max-width: 440px) {
+  .footer {
+    margin: 0;
+    margin-top: -1px;
+    background: #131313; }
+    .footer__form {
+      flex-direction: column; } }
+
 @media screen and (max-width: 375px) {
   .header {
     padding: 22px 0; }
@@ -1202,6 +1360,8 @@ img {
       margin-bottom: 1.85rem; }
   .title {
     font-size: 1.9rem; }
+  .button:hover {
+    cursor: default; }
   .projects {
     padding-bottom: 71rem; }
   .control {
@@ -1232,7 +1392,8 @@ img {
       color: rgba(255, 255, 255, 0.5); }
     .control__input {
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 0.6rem 0; }
+      padding: 0.6rem 0;
+      color: #ffffff; }
       .control__input::-webkit-input-placeholder {
         font-size: 1.585rem;
         line-height: 1.714rem;
@@ -1291,6 +1452,8 @@ img {
     max-width: 24.85rem;
     font-size: 1.25rem;
     line-height: 135.84%; }
+    .section-title__subtitle--light {
+      max-width: 26.55rem; }
   .section-title__heading {
     font-size: 1.84rem; }
     .section-title__heading--primary {
@@ -1338,7 +1501,68 @@ img {
     flex-basis: 47%; }
   .swiper-slide__value {
     font-size: 1.17rem;
-    line-height: 1.628rem; } }
+    line-height: 1.628rem; }
+  .team__row {
+    align-items: flex-end; }
+  .team__text {
+    display: none; }
+  .team__card {
+    margin-bottom: 3.7rem; }
+    .team__card-icon {
+      left: -33px;
+      top: 2.7rem; }
+    .team__card-image {
+      margin-top: 5.6rem;
+      margin-left: 0.4rem;
+      width: 292px;
+      height: 357px;
+      max-width: 25rem; }
+    .team__card-text {
+      margin: 0 auto;
+      margin-top: -6.7rem;
+      width: 78%;
+      padding: 1.49rem 2rem 2.1rem; }
+    .team__card-title {
+      margin-left: 0;
+      font-size: 1.44rem; }
+    .team__card-list {
+      padding: 0;
+      font-size: 1.47rem; }
+    .team__card-pricetag {
+      bottom: -1.79rem;
+      padding: 1.214rem 2.7rem;
+      font-size: 1.1rem; }
+  .footer {
+    margin: 0 -12px;
+    margin-top: -5.9rem; }
+    .footer__title {
+      font-size: 1.628rem;
+      margin-bottom: 4.714rem; }
+    .footer__wrap {
+      margin: auto;
+      padding: 0;
+      background-color: #131313; }
+    .footer__input-group {
+      margin-bottom: 5.2rem; }
+      .footer__input-group--full-width {
+        margin-bottom: 2rem; }
+    .footer__label {
+      font-size: 1.27rem; }
+    .footer__input {
+      padding-top: 0.1rem;
+      font-size: 1.52rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    .footer__button {
+      margin: 0;
+      margin-top: 1.9rem;
+      margin-bottom: 3rem;
+      padding: 1.385rem 4.785rem;
+      font-size: 1.23rem; }
+    .footer__menu {
+      display: none; }
+  .policy__label--center {
+    justify-content: start;
+    font-size: 1.342rem; } }
 
 @media screen and (max-width: 361px) {
   .header {
@@ -1359,4 +1583,12 @@ img {
   .card__text {
     margin-left: auto; }
   .swiper-slide__heading {
-    max-width: 7rem; } }
+    max-width: 7rem; }
+  .control__button {
+    margin: 0 auto;
+    padding: 1.3857rem 10rem;
+    max-width: 100%; } }
+
+@media screen and (max-width: 320px) {
+  .control__button {
+    margin-top: -1rem; } }
