@@ -336,8 +336,8 @@ template {
     .button--primary:hover {
       box-shadow: none;
       background-color: transparent;
-      border: 1px solid #ffffff;
-      color: #ffffff; }
+      border: 1px solid #E3B873;
+      color: #E3B873; }
   .button--outline {
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -374,7 +374,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden;
-  display: none; }
+  position: absolute; }
   .policy__checkbox:checked + .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
@@ -395,6 +395,9 @@ template {
     justify-content: center; }
 
 .invalid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   color: tomato; }
 
 input.invalid {
@@ -913,8 +916,8 @@ img {
   color: #ffffff; }
 
 .steps {
-  padding-top: 36.2rem;
-  padding-bottom: 30rem; }
+  padding-top: 35.5rem;
+  padding-bottom: 30.8rem; }
   .steps__section-title {
     margin-top: -5.8rem;
     margin-bottom: 6.242rem; }
@@ -983,7 +986,7 @@ img {
   margin-left: 7.1rem; }
 
 .team {
-  margin-top: -32.7rem; }
+  margin-top: -33.4rem; }
   .team__text {
     max-width: 40.685rem;
     margin: auto;
@@ -1064,16 +1067,80 @@ img {
   max-width: 32rem;
   line-height: 1.928rem; }
 
+.clients {
+  padding-top: 0;
+  margin-top: -1.6rem;
+  padding-bottom: 30rem; }
+  .clients__section-title {
+    margin-bottom: 1.6rem; }
+    .clients__section-title-heading {
+      margin-bottom: 1rem; }
+    .clients__section-title-subtitle {
+      max-width: 24rem;
+      line-height: 1.8rem; }
+  .clients__col {
+    flex-basis: 30.5%; }
+  .clients__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ffffff;
+    max-width: 26.85rem;
+    padding: 1.71rem 2rem 4rem 1.5rem;
+    margin-right: 0;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
+    .clients__card-icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.3rem; }
+    .clients__card-img {
+      width: 7rem;
+      height: 4.8rem;
+      margin-right: 0.64rem; }
+    .clients__card-title {
+      line-height: 1.786rem;
+      margin-top: 1.4rem;
+      margin-left: 0;
+      max-width: 18rem; }
+    .clients__card-item {
+      font-size: 1.07rem;
+      line-height: 1.95rem;
+      color: #959595; }
+    .clients__card-worktag {
+      position: absolute;
+      display: flex;
+      left: 0;
+      bottom: -1.79rem;
+      font-family: 'Yeseva One', cursive;
+      font-size: 1.21rem;
+      background-color: #E3B873;
+      color: #ffffff; }
+      .clients__card-worktag-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.857rem;
+        padding: 0 1.214rem;
+        border-right: 1px solid #ffffff;
+        box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+        .clients__card-worktag-text img {
+          margin-right: 1rem; }
+
 .footer {
   background: #131313 url(../img/footer-bg.jpg) no-repeat center;
   background-size: cover;
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  margin-top: -2.9rem; }
   .footer__wrap {
     background-color: #181818;
     max-width: 63.07rem;
     margin: 0 12.14rem 0 13.57rem;
-    margin-bottom: 3.714rem;
-    padding: 2.5rem; }
+    margin-bottom: 2.214rem;
+    padding: 2.5rem;
+    margin-top: -18.8rem; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
@@ -1099,14 +1166,39 @@ img {
         flex-basis: 100%;
         margin-bottom: 3.2rem; }
   .footer__policy {
-    flex-basis: 100%;
-    margin-bottom: 3.6rem; }
+    flex-basis: 100%; }
   .footer__button {
     margin: auto;
+    margin-top: 3.6rem;
     padding: 1.285rem 4.785rem; }
   .footer__menu {
     background-color: #131313;
-    padding: 4.285rem 0; }
+    padding: 3.285rem 0rem 3.285rem 0.8rem; }
+  .footer__subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .footer__subtitle-map {
+      font-family: 'Yeseva One', cursive;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.428rem;
+      line-height: 2rem;
+      color: #E3B873;
+      max-width: 39.14rem; }
+    .footer__subtitle-icon {
+      margin-right: 0.6rem; }
+  .footer__icon {
+    margin-bottom: 2.9rem; }
+  .footer__map {
+    width: 66.27rem;
+    max-width: 66.27rem;
+    min-height: 33.2rem;
+    margin: auto;
+    margin-bottom: 4.8rem; }
 
 .modal {
   opacity: 0;
@@ -1158,13 +1250,12 @@ img {
     margin-bottom: 3.228rem; }
     .modal__input-group:last-of-type {
       margin-bottom: 1rem; }
-  .modal__policy {
-    margin-bottom: 2.9rem; }
   .modal__button {
     align-self: flex-end;
     padding: 1.357rem 1.571rem;
     font-size: 0.928rem;
-    min-width: 213px; }
+    min-width: 213px;
+    margin-top: 2.9rem; }
 
 @media screen and (max-width: 1410px) {
   .logo {
@@ -1251,9 +1342,14 @@ img {
       margin-bottom: 3.7rem; }
     .team__text {
       color: #ffffff; }
+  .clients {
+    display: none; }
   .footer__wrap {
     margin: 0 auto 3rem;
-    max-width: 46.07rem; } }
+    max-width: 46.07rem; }
+  .footer__map {
+    width: 100%;
+    max-width: 56.07rem; } }
 
 @media screen and (max-width: 800px) {
   .control__video {
@@ -1554,12 +1650,28 @@ img {
       border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
     .footer__button {
       margin: 0;
-      margin-top: 1.9rem;
-      margin-bottom: 3rem;
+      margin-top: 5.6rem;
+      margin-bottom: 3.8rem;
       padding: 1.385rem 4.785rem;
       font-size: 1.23rem; }
     .footer__menu {
       display: none; }
+    .footer__map {
+      order: -1;
+      width: 100%;
+      max-width: 30rem;
+      min-height: 21.2rem;
+      max-height: 21.2rem;
+      margin-bottom: 1.9rem; }
+    .footer__subtitle-map {
+      font-size: 1.528rem;
+      max-width: 26.44rem;
+      margin-bottom: 2rem; }
+    .footer__subtitle-icon {
+      width: 40px; }
+      .footer__subtitle-icon:last-child {
+        margin: 0;
+        margin-left: 1rem; }
   .policy__label--center {
     justify-content: start;
     font-size: 1.342rem; } }
@@ -1591,4 +1703,8 @@ img {
 
 @media screen and (max-width: 320px) {
   .control__button {
-    margin-top: -1rem; } }
+    margin-top: -1rem; }
+  .footer__map {
+    width: 20.07rem;
+    max-width: 20.07rem;
+    min-height: 10.07rem; } }

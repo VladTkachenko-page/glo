@@ -193,8 +193,8 @@
          
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-            <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" name="policyCheckbox" id="control__policy-checkbox" class="policy__checkbox" checked>
+            <label for="control__policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- policy -->
         </form>
@@ -649,6 +649,69 @@
       <!-- /.container -->
     </section>
     <!-- /.section team -->
+    <section class="section clients">
+      <div class="container">
+        <div class="section-title clients__section-title">
+          <h2 class="section-title__heading clients__section-title-heading">Наши клиенты</h2>
+          <!-- /.section-title__heading -->
+          <div class="section-title__image">
+            <img src="./img/client.svg" alt="">
+          </div>
+          <!-- /.section-title__image -->
+          <p class="section-title__subtitle clients__section-title-subtitle">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
+        </div>
+        <!-- section-title -->
+        <div class="row clients__row">
+          <div class="col clients__col">
+            <div class="card clients__card">
+              <div class="clients__card-icon">
+                <div class="clients__card-img"><img src="img/clients/client-1.png" alt=""></div>
+                <h3 class="card__title clients__card-title">Савельева Екатерина&nbsp;Львовна</h3>
+              </div>
+                <p class="card__item clients__card-item">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+                  <!-- /.card__item -->
+                <div class="card__worktag clients__card-worktag">
+                  <span class="clients__card-worktag-text"><img src="img/clients/area.svg" alt=""> 40 М <sup>2</sup></span>
+                  <span class="clients__card-worktag-text"><img src="img/clients/date.svg" alt=""> 48 дней</span>
+                </div>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col clients__col">
+            <div class="card clients__card">
+              <div class="clients__card-icon">
+                <div class="clients__card-img"><img src="img/clients/client-2.png" alt=""></div>
+                <h3 class="card__title clients__card-title">Большов Михаил Анатольевич</h3>
+              </div>
+                <p class="card__item clients__card-item">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я&nbsp;рекомендую этих мастеров.</p>
+                  <!-- /.card__item -->
+                <div class="card__worktag clients__card-worktag">
+                  <span class="clients__card-worktag-text"><img src="img/clients/area.svg" alt=""> 90 М <sup>2</sup></span>
+                  <span class="clients__card-worktag-text"><img src="img/clients/date.svg" alt=""> 128 дней</span>
+                </div>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col clients__col">
+            <div class="card clients__card">
+              <div class="clients__card-icon">
+                <div class="clients__card-img"><img src="img/clients/client-3.png" alt=""></div>
+                <h3 class="card__title clients__card-title">Хасанов Даниил Муратович</h3>
+              </div>
+                <p class="card__item clients__card-item">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические.</p>
+                  <!-- /.card__item -->
+                <div class="card__worktag clients__card-worktag">
+                  <span class="clients__card-worktag-text"><img src="img/clients/area.svg" alt=""> 56 М <sup>2</sup></span>
+                  <span class="clients__card-worktag-text"><img src="img/clients/date.svg" alt=""> 86 дней</span>
+                </div>
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section clients -->
     <button class="scroll-up"> <img src="img/arrow.svg" alt=""></button>
   </main>
   <footer class="footer section--dark">
@@ -666,11 +729,11 @@
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <label for="user-question" class="label form__label label--light footer__label">Вопрос</label>
-            <input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
+            <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-            <label for="policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" name="policyCheckbox" id="footer__policy-checkbox" class="policy__checkbox" checked>
+            <label for="footer__policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- policy -->
           <button class="button button--primary footer__button">Отправить</button>
@@ -678,6 +741,16 @@
       <!-- /.form footer__form -->
       </div>
       <!-- /.footer-wrap -->
+      <div class="footer__subtitle">
+        <h3 class="footer__subtitle-map">Ростов на дону, Торговый центр Plaza
+        Прямой телефон +7 (999) 768 32 99</h3>
+        <div class="footer__icon"><img src="img/email.svg" alt="Email" class="footer__subtitle-icon">
+        <img src="img/inst.svg" alt="Instagram" class="footer__subtitle-icon"></div>
+        <div class="map footer__map" id="map">
+          
+        </div>
+      </div>
+      <!-- /.map footer__map -->
     </div>
     <!-- container -->
     <div class="footer__menu">
@@ -722,8 +795,8 @@
           <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email">
         </div>
         <div class="policy modal__policy">
-          <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-          <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+          <input type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
+          <label for="modal-policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- policy -->
         <button class="button button--primary modal__button">Отправить заявку</button>
@@ -738,6 +811,8 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3fb25be1-5969-411a-813f-b2dd4e7f1058
+        &lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

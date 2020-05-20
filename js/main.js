@@ -37,7 +37,7 @@ $(document).ready(function () {
   });
 
   $('.hero__scroll-down').on("click", "", function() {
-    $('html').animate({scrollTop: $('.control').position().top - 80}, 1000);
+    $('html').animate({scrollTop: $('.projects').position().top - 80}, 1000);
   });
 
   var mySwiper = new Swiper ('.projects__swiper-container', {
@@ -115,9 +115,17 @@ $(document).ready(function () {
   );
   video.init();
 
-  $('.modal__form', '.footer__form').validate({
+  const validate = (element) => {
+    $(element).validate({
     errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function(error, element) {
+      if (element.attr("name") == "policyCheckbox") {
+          error.insertAfter(element.parent());
+      } else {
+          error.insertAfter(element);
+      }
+  },
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -126,6 +134,10 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
+      policyCheckbox: {
+        required: true,
+      },
+      userQuestion: "required",
       // compound rule
       userEmail: {
         required: true,
@@ -139,12 +151,50 @@ $(document).ready(function () {
         maxlength: "Имя не длиннее пятнадцати букв"
       },
       userPhone: "Телефон обязателен",
+      policyCheckbox: "Вам нужно согласиться с обработкой данных",
+      userQuestion: "Задайте вопрос",
       userEmail: {
         required: "Обязательно укажите Email",
         email: "Введите в формате: name@domain.com"
       }
     }
   });
-
+}
+  validate('.control__form');
+  validate('.modal__form');
+  validate('.footer__form');
   $('[type=tel]').mask('+7(000) 000-00-00');
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [47.208901, 39.631539],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Наш офис',
+            balloonContent: 'Добро пожаловать'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/location.png',
+            // Размеры метки.
+            iconImageSize: [32, 32],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark);
+});
 });

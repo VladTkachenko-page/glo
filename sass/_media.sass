@@ -96,10 +96,15 @@
       margin-bottom: 3.7rem
     &__text
       color: $light
+  .clients
+    display: none
   .footer
     &__wrap
       margin: 0 auto 3rem
       max-width: 46.07rem
+    &__map
+      width: 100%
+      max-width: 56.07rem
 @media screen and ( max-width: 800px  )
   .control
     &__video
@@ -400,12 +405,29 @@
       border-bottom: 1px solid rgba($light, 0.3)
     &__button
       margin: 0
-      margin-top: 1.9rem
-      margin-bottom: 3rem
+      margin-top: 5.6rem
+      margin-bottom: 3.8rem
       padding: 1.385rem 4.785rem
       font-size: 1.23rem
     &__menu
       display: none
+    &__map
+      order: -1
+      width: 100%
+      max-width: 30rem
+      min-height: 21.2rem
+      max-height: 21.2rem
+      margin-bottom: 1.9rem
+    &__subtitle
+      &-map
+        font-size: 1.528rem
+        max-width: 26.44rem
+        margin-bottom: 2rem
+      &-icon
+        width: 40px
+        &:last-child
+          margin: 0
+          margin-left: 1rem
   .policy__label--center
     justify-content: start
     font-size: 1.342rem
@@ -442,3 +464,8 @@
   .control
     &__button
       margin-top: -1rem
+  .footer
+    &__map
+      width: 20.07rem
+      max-width: 20.07rem
+      min-height: 10.07rem
