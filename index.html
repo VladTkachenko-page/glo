@@ -181,14 +181,14 @@
         </div>
         <!-- /.control__video video -->
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-        <form action="" class="form control__form">
-          <div class="control__input-group">
+        <form action="send.php" method="POST" class="form control__form">
+          <div class="input-group control__input-group">
             <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input control__input" id="control-user-name" placeholder="Как вас зовут:">
           </div>
-          <div class="control__input-group">
+          <div class="input-group control__input-group">
             <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input control__input" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
          
           <button class="button button--primary control__button">Отправить</button>
@@ -718,18 +718,18 @@
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
-        <form action="" class="form footer__form">
+        <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label--light footer__label">Имя</label>
-            <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
             <label for="user-phone" class="label form__label label--light footer__label">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <label for="user-question" class="label form__label label--light footer__label">Вопрос</label>
-            <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
+            <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
             <input type="checkbox" name="policyCheckbox" id="footer__policy-checkbox" class="policy__checkbox" checked>
@@ -744,8 +744,8 @@
       <div class="footer__subtitle">
         <h3 class="footer__subtitle-map">Ростов на дону, Торговый центр Plaza
         Прямой телефон +7 (999) 768 32 99</h3>
-        <div class="footer__icon"><img src="img/email.svg" alt="Email" class="footer__subtitle-icon">
-        <img src="img/inst.svg" alt="Instagram" class="footer__subtitle-icon"></div>
+        <div class="footer__icon"><a href="http://gmail.com/"><img src="img/email.svg" alt="Email" class="footer__subtitle-icon"></a>
+        <a href="https://www.instagram.com/"><img src="img/inst.svg" alt="Instagram" class="footer__subtitle-icon"></a></div>
         <div class="map footer__map" id="map">
           
         </div>
@@ -781,18 +781,18 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-      <form action="" class="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="user-name" class="label form__label label--light">Имя</label>
-          <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
+          <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
           <label for="user-phone" class="label form__label label--light">Телефон</label>
-          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
           <label for="user-email" class="label form__label label--light">Email</label>
-          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email">
+          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email">
         </div>
         <div class="policy modal__policy">
           <input type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
@@ -806,13 +806,21 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+  <div class="modal__thanks">
+    <div class="modal__dialog">
+      <button class="modal__thanks-close"></button>
+      <h3 class="modal__title modal__title-thanks">Ваша заявка принята. Наш менеджер свяжется с Вами в течение 15 минут. <br> Также Вы можете подписаться на нашу группу Вконтакте </h3>
+      <a href="https://vk.com/glo_academy" class="modal__thanks-btn"><button class="button button--primary">Repair Design Project</button></a>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=3fb25be1-5969-411a-813f-b2dd4e7f1058
-        &lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3fb25be1-5969-411a-813f-b2dd4e7f1058&lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

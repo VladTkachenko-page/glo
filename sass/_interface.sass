@@ -41,7 +41,10 @@
   &--light
     &::placeholder
       color: $light
+  &-group
+    position: relative
 .policy
+  position: relative
   &__checkbox
     opacity: 0
     visibility: hidden
@@ -65,9 +68,12 @@
       margin-right: 0.57rem
     &--center
       justify-content: center
-.invalid
+div.invalid
   display: flex 
   justify-content: center
+  position: absolute
+  margin-top: 10px
+  bottom: -18px
   width: 100%
   color: tomato
 input
@@ -79,7 +85,7 @@ input
   width: 64px
   height: 64px 
   right: 2.857rem
-  bottom: 2.857rem
+  bottom: 9rem
   background: transparent
   z-index: 100
   border: none

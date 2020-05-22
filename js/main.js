@@ -3,8 +3,8 @@ $(document).ready(function () {
       modalDialog = $('.modal__dialog'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
-      scrollUp = $('.scroll-up');
-
+      modalThanks = $('.modal__thanks')
+      closeBtnThaks = $('.modal__thanks-close')
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -115,13 +115,23 @@ $(document).ready(function () {
   );
   video.init();
 
+  closeBtnThaks.on('click', function () {
+    modalThanks.toggleClass('modal__thanks--visible');
+  });
+
+  modalThanks.on('click', function (e) {
+    if (e.target!=modalDialog[0]&&!modalDialog.has(e.target).length){
+        modalThanks.toggleClass('modal__thanks--visible');  
+    }
+  });
+
   const validate = (element) => {
     $(element).validate({
     errorClass: "invalid",
     errorElement: "div",
     errorPlacement: function(error, element) {
       if (element.attr("name") == "policyCheckbox") {
-          error.insertAfter(element.parent());
+          error.insertAfter(element.next());
       } else {
           error.insertAfter(element);
       }
@@ -157,9 +167,24 @@ $(document).ready(function () {
         required: "Обязательно укажите Email",
         email: "Введите в формате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('modal__thanks--visible'); 
+          $(form)[0].reset();
+        }
+      });
     }
   });
 }
+    
+
+
   validate('.control__form');
   validate('.modal__form');
   validate('.footer__form');
@@ -193,7 +218,7 @@ $(document).ready(function () {
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]
         });
-
+    myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects
         .add(myPlacemark);
 });
