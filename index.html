@@ -164,7 +164,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.section section--dark projects -->
+    <!-- /.section section-dark projects -->
     <section class="section control">
       <div class="container">
         <div class="section-title control__section-title section-title--light">
@@ -183,11 +183,11 @@
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
         <form action="send.php" method="POST" class="form control__form">
           <div class="input-group control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
+            <label for="control-user-name" class="label form__label control__label">Имя</label>
             <input type="text" name="userName" class="input form__input control__input" id="control-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <label for="control-user-phone" class="label form__label control__label">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input control__input" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
          
@@ -316,6 +316,50 @@
       <!-- /.container -->
     </section>
     <!-- /.section types -->
+    <section class="section measure">
+      <div class="container">
+        <div class="measure__wrap">
+          <div class="measure__step">
+            <div class="measure__img"><img src="img/measure.png" alt=""></div>
+            <p class="measure__step-text">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</p>
+            <p class="measure__step-text">Бесплатный замер</p>
+            <p class="measure__step-text">Бесплатная консультация</p>
+            <p class="measure__step-text">Получите смету расходов и сроки вашего будущего ремонта</p>
+          </div>
+          <div class="measure__form">
+            <div class="measure__dialog">
+              <h3 class="measure__title">Оставьте заявку на бесплатный <br> выезд замерщика</h3>
+              <form action="send.php" method="POST" class="form modal__form">
+                <div class="input-group measure__input-group">
+                  <label for="measure-user-name" class="label form__label label--light">Имя</label>
+                  <input type="text" name="userName" class="input form__input modal__input input--light" id="measure-user-name" placeholder="Как вас зовут:">
+                </div>
+                <div class="input-group measure__input-group">
+                  <label for="measure-user-phone" class="label form__label label--light">Телефон</label>
+                  <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="measure-user-phone" placeholder="Ваш телефон:">
+                </div>
+                <div class="input-group measure__input-group">
+                  <label for="measure-user-email" class="label form__label label--light">Email</label>
+                  <input type="email" name="userEmail" class="input form__input modal__input input--light" id="measure-user-email" placeholder="Ваш email">
+                </div>
+                <div class="policy modal__policy">
+                  <input type="checkbox" name="policyCheckbox" id="measure-policy-checkbox" class="policy__checkbox" checked>
+                  <label for="measure-policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                </div>
+                <!-- policy -->
+                <button class="button button--primary measure__button">Вызвать замерщика</button>
+              </form>
+              <!-- /.form modal__form -->
+            </div>
+            <div class="measure__moneybox">
+              <img src="img/moneybox.png" alt="" class="measure__moneybox-img">
+              <p class="measure__moneybox-text">Это поможет сэкономить 10 - 20% от стоимости материалов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.section measure -->
     <section class="section design">
       <div class="container">
         <div class="section-title design__section-title">
@@ -440,7 +484,7 @@
           <div class="col-38">
             <div class="section-title section-title--left steps__section-title">
               <p class="steps__section-title--up">как мы работаем</p>
-              <h2 class="section-title__heading section-title__heading--primary ">6 шагов <span class="section-title__word section-title__word--right">до цели</span> </h2>
+              <h2 class="section-title__heading section-title__heading--primary steps-title__heading">6 шагов <span class="section-title__word section-title__word--right">до цели</span> </h2>
               <!-- /.section-title__heading -->
             </div>
             <!-- Slider main container -->
@@ -569,7 +613,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.section section--dark steps -->
+    <!-- /.section section-dark steps -->
     <section class="section team">
       <div class="container">
         <div class="section-title team__section-title section-title--light">
@@ -720,15 +764,15 @@
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light footer__label">Имя</label>
+            <label for="footer-user-name" class="label form__label label--light footer__label">Имя</label>
             <input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light footer__label">Телефон</label>
+            <label for="footer-user-phone" class="label form__label label--light footer__label">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
-            <label for="user-question" class="label form__label label--light footer__label">Вопрос</label>
+            <label for="footer-user-question" class="label form__label label--light footer__label">Вопрос</label>
             <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
@@ -744,7 +788,7 @@
       <div class="footer__subtitle">
         <h3 class="footer__subtitle-map">Ростов на дону, Торговый центр Plaza
         Прямой телефон +7 (999) 768 32 99</h3>
-        <div class="footer__icon"><a href="http://gmail.com/"><img src="img/email.svg" alt="Email" class="footer__subtitle-icon"></a>
+        <div class="footer__icon"><a href="mailto:test@gmail.com"><img src="img/email.svg" alt="Email" class="footer__subtitle-icon"></a>
         <a href="https://www.instagram.com/"><img src="img/inst.svg" alt="Instagram" class="footer__subtitle-icon"></a></div>
         <div class="map footer__map" id="map">
           
@@ -776,22 +820,22 @@
     </div>
     <!-- /.footer__menu -->
   </footer>
-  <!-- /.footer section section--dark -->
+  <!-- /.footer section section-dark -->
   <div class="modal">
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
       <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
-          <label for="user-name" class="label form__label label--light">Имя</label>
+          <label for="modal-user-name" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-phone" class="label form__label label--light">Телефон</label>
+          <label for="modal-user-phone" class="label form__label label--light">Телефон</label>
           <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-email" class="label form__label label--light">Email</label>
+          <label for="modal-user-email" class="label form__label label--light">Email</label>
           <input type="email" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email">
         </div>
         <div class="policy modal__policy">
@@ -809,8 +853,8 @@
   <div class="modal__thanks">
     <div class="modal__dialog">
       <button class="modal__thanks-close"></button>
-      <h3 class="modal__title modal__title-thanks">Ваша заявка принята. Наш менеджер свяжется с Вами в течение 15 минут. <br> Также Вы можете подписаться на нашу группу Вконтакте </h3>
-      <a href="https://vk.com/glo_academy" class="modal__thanks-btn"><button class="button button--primary">Repair Design Project</button></a>
+      <h3 class="modal__title modal__title-thanks">Ваша заявка принята. Наш менеджер свяжется с Вами в течение 15 минут. <br> Также Вы можете подписаться на нашу группу Вконтакте. Для перехода в группу нажмите на кнопку. </h3>
+      <a href="https://vk.com/glo_academy" class="modal__thanks-btn">Перейти в группу</a>
       <!-- /.form modal__form -->
     </div>
     <!-- /.modal__dialog -->
@@ -820,7 +864,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=3fb25be1-5969-411a-813f-b2dd4e7f1058&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3fb25be1-5969-411a-813f-b2dd4e7f1058&lang=ru_RU"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

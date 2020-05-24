@@ -1,5 +1,27 @@
 .projects
-  padding-bottom: 25rem
+  position: relative 
+  margin-top: -3.6rem
+  padding: 12.5rem 0 25rem
+  background: $dark url(../img/line.png) no-repeat center
+  background-size: cover
+  &::before
+    content: ''
+    background: url(../img/town-l.png) left no-repeat
+    position: absolute
+    left: 0
+    bottom: 0
+    max-width: 637px
+    width: 100%
+    height: 559px
+  &::after
+    content: ''
+    background: url(../img/town-r.png) right no-repeat
+    position: absolute
+    right: 0
+    bottom: 0
+    max-width: 637px
+    width: 100%
+    height: 559px
 .swiper
   &-wrapper
     margin-bottom: 4.814rem
