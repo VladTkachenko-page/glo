@@ -1,4 +1,5 @@
 *, *:before, *:after
+  outline: none
   box-sizing: border-box
 html
   font-size: 14px
@@ -68,7 +69,13 @@ img
         height: 2px
         background-color: $primary
         margin: 0 10px
-.ymaps-2-1-76-inner-panes
-  /* Firefox 3.5+ */
-  -webkit-filter: grayscale(100%);
-  /* Chrome 19+ & Safari 6+ */
+.line--light
+  position: relative
+  &::before
+    content: ''
+    background: url(../img/line-light.png) center/cover no-repeat
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%

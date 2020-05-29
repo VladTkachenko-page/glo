@@ -1,0 +1,106 @@
+.styles
+  position: relative
+  background-color: $dark
+  margin-top: 11rem
+  padding: 9.6rem 0 0 0
+  background: $dark url('../img/bg-styles.webp') no-repeat
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: rgba($dark, 0.7)
+  & .container
+    width: 86.5%
+  &__swiper-container
+    overflow: visible
+  &-wrapper
+    margin-bottom: -5px
+  &__heading
+    position: relative
+    margin: 0
+    text-align: left
+    max-width: 31rem
+    font-size: 2.1rem
+    letter-spacing: -0.06em
+  &-menu
+    margin-top: 3.2rem
+    &__item
+      position: relative
+      font-family: 'Futura Demi',sans-serif;
+      font-weight: normal
+      font-size: 1.6rem
+      color: $light
+      margin-bottom: 1.74rem
+      max-width: 20rem
+      cursor: pointer     
+  &__slide
+    position: relative
+    display: none
+    justify-content: space-between
+    align-items: center
+    flex-wrap: nowrap
+    & img
+      width: 100%
+      object-fit: cover
+    &--left 
+      margin: -17.6rem 3.07rem -2.857rem 1rem
+      max-width: 25.28rem
+      width: 100%
+      &-img
+        &:first-child img
+          height: 39.57rem
+          margin-bottom: 2.714rem
+        &:last-child img
+          height: 25rem
+    &--right
+      margin-top: -25.9rem
+      max-width: 25.28rem
+      width: 100%
+      &-img
+        &:first-child img
+          height: 19.64rem
+          margin-bottom: 2.714rem
+        &:last-child img
+          height: 44.64rem
+  &-wrapper--mobile
+    display: none
+    max-width: 28.28rem
+    max-height: 20rem
+    margin: 0 auto 
+  &__image--mobile 
+    width: 100%
+    max-width: 28.28rem
+    height: 100%
+    max-height: 20rem
+    margin: 0 auto
+    object-fit: cover
+  &__swiper-button-prev
+    background: $primary url(../img/styles/styles-prev.svg) center no-repeat
+    position: absolute
+    top: 51.5%
+    left: 1.1rem
+    width: 36px
+    height: 36px
+    border-radius: 50%
+  &__swiper-button-next
+    background: $primary url(../img/styles/styles-next.svg) center no-repeat
+    position: absolute
+    top: 51.5%
+    right: 1rem
+    width: 36px
+    height: 36px
+    border-radius: 50%
+  .active
+    color: $primary
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0 
+      width: 50%
+      height: 1px
+      background-color: $primary
+  

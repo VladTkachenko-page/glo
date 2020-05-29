@@ -58,6 +58,10 @@
       margin-left: 0
     &__button
       margin-right: 0
+@media screen and ( max-width: 1028px  )
+  .styles__heading
+    font-size: 2rem
+    max-width: 28rem
 @media screen and ( max-width: 991px  )
   .hero
     &::after
@@ -87,6 +91,8 @@
   .design
     background-color: $dark
     margin-bottom: 0
+    margin-top: -10rem
+    padding-top: 14.48rem
     &__card
       margin-bottom: 6.28rem
     &__section-title
@@ -100,11 +106,27 @@
     width: 100%
   .col-40
     width: 100%
+  .styles
+    margin: 0
+    padding: 0
+    background: none
+    &::before
+      display: none 
+    &__heading
+      text-align: center
+      margin: 0 auto
+      margin-bottom: 2.7rem
+      font-size: 1.8rem
+      letter-spacing: 0px
+    & .row
+      display: none
+    &-wrapper--mobile
+      display: flex
   .steps
     display: none
   .team
     background-color: $dark
-    margin-top: -9.1rem
+    margin-top: -8.9rem
     &__card
       margin-bottom: 3.7rem
     &__text
@@ -112,6 +134,7 @@
   .clients
     display: none
   .footer
+    padding-top: 6rem
     &__wrap
       margin: 0 auto 3rem
       max-width: 46.07rem
@@ -128,6 +151,10 @@
     &__play
       width: 20%
       height: 20%
+@media screen and ( max-width: 670px  )
+  .scroll-up
+    opacity: 0
+    visibility: hidden
 @media screen and ( max-width: 570px  )
   .contacts
     &__phone
@@ -181,7 +208,11 @@
     &__button
       width: 100%
   .title
-      font-size: 2.64rem
+      font-size: 1.64rem
+  .control__policy
+    & div.invalid
+      justify-content: left
+      margin-left: 0
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
@@ -196,26 +227,30 @@
       margin-bottom: 0.5rem
     &__button
       padding: 1rem
+@media screen and ( max-width: 497px  )
+  .hero
+    &__title
+      max-width: 22rem
 @media screen and ( max-width: 440px  )
   .footer
     margin: 0
     margin-top: -1px
     background: $dark
+    padding: 0
+    &__wrap
+      background: $dark
     &__form
       flex-direction: column
 @media screen and ( max-width: 375px  )
+  .container
+    width: 90.5%
   .header
     padding: 22px 0
-    & .container
-      margin: 0 18px
-  .menu
-    min-width: 340px
   .hero
     display: block
-    max-height: 532px
+    max-height: 576px
     &__content
       margin-top: 40px
-      margin-left: -10px
       max-width: 26.7rem
     &__text
       font-size: 1.5rem
@@ -233,10 +268,28 @@
       cursor: default
   .projects
     padding-bottom: 71rem
+    background: $dark
+    &::before
+      display: none
+    &::after
+      display: none
+    & .swiper
+      &-wrapper 
+        margin-bottom: 2rem
+      &-slide
+        img
+          width: 340px
+          height: 203px
+        &__heading
+          font-size: 1.15rem
+        &__text
+          flex-basis: 47%
+        &__value
+          font-size: 1.17rem
+          line-height: 1.628rem
   .control
-    margin-right: -12px
-    margin-left: -12px
-    margin-top: -73.7rem
+    background: none
+    margin-top: -73.8rem
     &__video
       margin-bottom: 2.428rem
       max-width: 28rem
@@ -260,7 +313,7 @@
       font-size: 1.17rem
       color: rgba($light, 0.5)
     &__input
-      border-bottom: 1px solid rgba($light, 0.3)
+      border-bottom: 1px solid rgba($light, 0.7)
       padding: 0.6rem 0
       color: $light
       &::placeholder
@@ -300,9 +353,9 @@
     &__text
       max-width: 22.5rem
       margin-top: -12.2rem
-      padding: 1.99rem 2.44rem
+      padding: 1.99rem 2.24rem
     &__list
-      padding: 0 0 0 1.7rem
+      padding: 0 0 0 1.8rem
       margin-bottom: 1.8rem
       line-height: 1.9rem
     &__item
@@ -317,6 +370,7 @@
       line-height: 145%
       &--light
         max-width: 26.55rem
+        margin-bottom: 1rem
     &__heading
       font-size: 1.84rem
       &--primary
@@ -338,7 +392,7 @@
         margin-left: 0.55rem
       &__text
         margin-top: -12.2rem
-        padding: 1.24rem 2.2rem 1.84rem
+        padding: 1.34rem 2.2rem 1.84rem
       &__list
         padding: 0 0 0 1.8rem
       &__pricetag
@@ -349,31 +403,17 @@
         display: none
       &__item--seven:nth-child(7)::after
         content: '...'  
-  .scroll-up
-    opacity: 0
-    visibility: hidden
   .section
     &--dark
       padding-top: 0
-      margin: 0 -12px
     &-title
       &__word
         &::after
           display: none
-  .swiper
-    &-wrapper 
-      margin-bottom: 2rem
-    &-slide
-      img
-        width: 340px
-        height: 203px
-      &__heading
-        font-size: 1.15rem
-      &__text
-        flex-basis: 47%
-      &__value
-        font-size: 1.17rem
-        line-height: 1.628rem
+  .styles
+    margin-top: -8.6rem
+    &__heading
+      font-size: 1.8rem
   .team
     &__row
       align-items: flex-end
@@ -382,40 +422,44 @@
     &__card
       margin-bottom: 3.7rem
       &-icon  
-        left: -33px
-        top: 2.7rem
+        left: -32px
+        top: 2.6rem
+      &-image-wrap
+        width: 308px
       &-image
+        width: 305px
         margin-top: 5.6rem
         margin-left: 0.4rem
-        width: 292px
         height: 357px
         max-width: 25rem
+      & img
+        max-width: 305px
       &-text
         margin: 0 auto
-        margin-top: -6.7rem
-        width: 78%
+        margin-top: -6.8rem
+        width: 77%
         padding: 1.49rem 2rem 2.1rem
       &-title
-        margin-left: 0
-        margin-top: 7px
-        font-size: 1.44rem
+        margin-left: -3px
+        margin-top: 9px
+        font-size: 1.49rem
+        margin-bottom: 0.8rem
       &-list
         padding: 0
         font-size: 1.47rem
       &-pricetag
         bottom: -1.79rem
-        padding: 1.214rem 2.7rem
-        font-size: 1.1rem
+        padding: 1.314rem 2.7rem
+        font-size: 1.05rem
   .footer
-    margin: 0 -12px
-    margin-top: -5.9rem
+    margin-top: -6.5rem
     &__title
       font-size: 1.628rem
       margin-bottom: 4.714rem
     &__wrap
       margin: auto
       padding: 0
-      background-color: $dark
+      background: $dark
     &__input-group
       margin-bottom: 5.2rem
       &--full-width
@@ -425,7 +469,7 @@
     &__input
       padding-top: 0.1rem
       font-size: 1.52rem
-      border-bottom: 1px solid rgba($light, 0.3)
+      border-bottom: 1px solid rgba($light, 0.7)
     &__button
       margin: 0
       margin-top: 5.6rem
@@ -447,18 +491,20 @@
         max-width: 26.44rem
         margin-bottom: 2rem
       &-icon
-        width: 40px
-        &:last-child
-          margin: 0
-          margin-left: 1rem
+        width: 40px 
+        margin-left: 1rem   
+  .footer__policy div.invalid
+    justify-content: start 
   .policy__label--center
     justify-content: start
     font-size: 1.342rem
+  .line--light
+    position: inherit
+    &::before
+      display: none
 @media screen and ( max-width: 361px  )
   .header
     padding: 20px 0
-    & .container
-      margin: 0 10px
   .menu
     min-width: auto
   .hero
@@ -472,6 +518,9 @@
       padding: 0 2.5rem
     &__text
       margin-left: auto
+      max-width: 19.5rem
+  .types__card, .design__card
+    width: 100%
   .swiper
     &-slide
       &__heading
@@ -479,16 +528,65 @@
   .control
     &__button
       margin: 0 auto
+      margin-top: 5rem
       padding: 1.3857rem 10rem
       max-width: 100%
   .team__card-icon 
     left: 5px
 @media screen and ( max-width: 320px  )
   .control
+    &__text
+      font-size: 1.27rem
     &__button
       margin-top: 3rem
+  .team
+    &__card
+      &-icon
+        left: 0
+      &-image-wrap
+        width: 275px
+      &-text
+        width: 80%
   .footer
     &__map
       width: 20.07rem
       max-width: 20.07rem
       min-height: 10.07rem
+@media screen and ( max-height: 650px  )
+  .hero
+    max-height: 100vh
+@media screen and ( max-height: 550px  )   
+   .hero
+     &__content
+       margin-top: -3rem
+@media screen and ( max-height: 430px  )
+  .header
+    padding: 14px 0
+  .modal__input-group 
+    margin-bottom: 1.228rem
+  .hero
+    &::after
+      display: none
+    &__title
+      margin-top: 3rem
+    &__text
+      margin-bottom: 1rem
+    &__button
+      padding: 13px 27px
+  .projects
+    margin-top: 0
+    padding-top: 4rem
+@media screen and ( max-height: 350px  )
+  .modal
+    &__title
+      font-size: 1rem
+      margin-bottom: 0.3rem
+    &__input
+      font-size: 1rem
+      margin-bottom: 0.228rem
+    &__button 
+      margin-top: 0.9rem
+  .label
+    font-size: 1rem
+  div.invalid
+    bottom: -13px

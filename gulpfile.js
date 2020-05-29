@@ -1,10 +1,13 @@
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch, series} = require('gulp');
 const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
-const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-
+const minify = require('gulp-minify');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 function bs() {
   serveSass();
   browserSync.init({
@@ -28,11 +31,52 @@ function serveSass() {
     .pipe(browserSync.stream())
 };
 
-function minCSS() {
-  return src("./css/*.css")
-  .pipe(rename({suffix: ".min"}))
+function minCSS(done) {
+  src("./css/*.css")
   .pipe(cleanCSS())
-  .pipe(dest("./css"));
+  .pipe(dest("dist/css"));
+  done();
 };
 
+function minJS(done) {
+  src("js/**.js")
+    .pipe(minify({
+      ext:{
+        min: '.js',
+      },
+      noSource: true,
+      ignoreFiles: ['*.min.js'],
+    }))
+    .pipe(dest("dist/js"))
+    .pipe(uglify())
+  src("js/**.min.js").pipe(dest("dist/js"))
+  done();
+};
+function html(done) {
+  src("**.html")
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(dest("dist/"));
+  done();
+}
+function php(done) {
+src("**.php")
+  .pipe(dest("dist/"));
+src("phpmailer/**/**")
+  .pipe(dest("dist/phpmailer"));
+  done();
+}
+function fonts(done) {
+  src("fonts/**/**")
+    .pipe(dest("dist/fonts"));
+    done();
+  }
+function minIMG(done){
+  src("img/**/**")
+    .pipe(imagemin())
+    .pipe(dest("dist/img"));
+  done();
+}
+
 exports.serve = bs;
+exports.js = minIMG;
+exports.min = series(minCSS, html);

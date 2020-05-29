@@ -50,7 +50,6 @@ $(document).ready(function () {
       el: '.projects__swiper-pagination',
       type: 'bullets',
     },
-    
   });
   var next = $('.projects__swiper-button-next');
   var prev = $('.projects__swiper-button-prev');
@@ -59,24 +58,23 @@ $(document).ready(function () {
   next.css('left', prev.width() + 15 + pbullets.width() + 15);
   pbullets.css('left', prev.width() + 15);
   
-  var sSwiper = new Swiper ('.steps__swiper-container', {  
+  var sSwiper = new Swiper ('.steps__swiper-container', { 
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.steps__swiper-button-next',
+      prevEl: '.steps__swiper-button-prev',
     },
     pagination: {
       el: '.steps__swiper-pagination',
       type: 'bullets',
     },
-    
   });
   var ssSwiper = new Swiper ('.steps_swiper-container', {  
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
+      nextEl: '.steps__swiper-button-next',
+      prevEl: '.steps__swiper-button-prev',
+    },
   });
   var sbullets = $('.steps__swiper-pagination');
   var snext = $('.steps__swiper-button-next');
@@ -101,20 +99,7 @@ $(document).ready(function () {
   sSwiper.on('slideChange', function () {
     $('.steps__swiper-slide-count').text(sSwiper.realIndex + 1 + '/' + (sSwiper.slides.length - 2));
   });
-  
   new WOW().init();
-
-  const video = new WOW(
-    {
-    boxClass:     'video',      // default
-    animateClass: 'animated', // default
-    offset:       0,          // default
-    mobile:       true,       // default
-    live:         true        // default
-  }
-  );
-  video.init();
-
   closeBtnThaks.on('click', function () {
     modalThanks.toggleClass('modal__thanks--visible');
   });
@@ -137,7 +122,6 @@ $(document).ready(function () {
       }
   },
     rules: {
-      // simple rule, converted to {required:true}
       userName: {
         required: true,
         minlength: 2,
@@ -148,7 +132,6 @@ $(document).ready(function () {
         required: true,
       },
       userQuestion: "required",
-      // compound rule
       userEmail: {
         required: true,
         email: true
@@ -182,44 +165,50 @@ $(document).ready(function () {
     }
   });
 }
-    
-
-
   validate('.control__form');
+  validate('.measure__form');
   validate('.modal__form');
   validate('.footer__form');
   $('[type=tel]').mask('+7(000) 000-00-00');
 
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [47.208901, 39.631539],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+var player;
+$('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+    height: '360',
+    width: '100%',
+    videoId: 'RHzzLqJWqHs',
+    events: {
+      'onReady': videoPlay,
+    }
+  });
+})
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+function videoPlay(event) {
+  event.target.playVideo();
+}
+$(document).ready(function(){
+  $("#menu").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top - 20;
+      $('body,html').animate({scrollTop: top}, 2000);
+  });
+});
+  var fSwiper = new Swiper ('.styles__swiper-container', {  
+    loop: true,
+  });
+  $('.styles-menu__item').on('click', function () {
+      const e = $(this).data('index');
+      $(this).addClass('active').siblings().removeClass('active');
+      $('.styles__slide').css("display", "none").eq(e).css("display", "flex")
+  });
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Добро пожаловать'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/location.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
-    myMap.behaviors.disable('scrollZoom');
-    myMap.geoObjects
-        .add(myPlacemark);
+  $('.styles-menu__item').eq(0).addClass('active'),
+  $('.styles__slide').eq(1).css("display", "flex");
+new Swiper(".styles-slider",{
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+  }
 });
 });

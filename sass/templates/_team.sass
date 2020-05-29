@@ -26,10 +26,17 @@
     justify-content: center
     align-items: center
     position: relative
+    &-image-wrap
+      display: flex
+      justify-content: center
+      width: 272px
+      overflow: hidden
     &-image
-      max-width: 22.5rem
-      min-height: 25.5rem
       margin-top: 4.4rem
+      width: 310px
+      min-height: 25.5rem
+    & img
+      max-width: 310px    
     &-icon
       display: flex
       justify-content: center
@@ -43,36 +50,21 @@
       box-shadow: 0px 5px 20px rgba($primary, 0.5)
     &-text
       text-align: center
-      position: relative
       width: 70%
-      margin: 0 auto
       margin-top: -5.8rem
       padding: 1.69rem 2rem 0.5rem
-      background-color: $light
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
     &-title
-      font-family: 'Yeseva One', cursive
-      font-size: 1.29rem
       margin-top: 2px
       margin-bottom: 0.6rem 
       margin-left: 0.25rem
     &-list
       padding: 0
-      margin: 0
-      margin-bottom: 2.3rem
       font-size: 1.27rem
       line-height: 1.5rem
-      color: $secondary
       list-style-type: none
     &-pricetag
-      position: absolute
-      left: 0
       bottom: -1.79rem
-      font-family: 'Yeseva One', cursive
       font-size: 0.9rem 
-      text-transform: uppercase
-      background-color: $primary
-      color: $light
       width: 100%
       padding: 1.114rem 1.7rem
 .section-title__subtitle

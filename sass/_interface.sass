@@ -70,12 +70,19 @@
       justify-content: center
 div.invalid
   display: flex 
-  justify-content: center
+  justify-content: left
   position: absolute
   margin-top: 10px
   bottom: -18px
   width: 100%
   color: tomato
+.control__policy
+  & div.invalid
+    justify-content: center
+    margin-left: -2rem
+.footer__policy
+  & div.invalid
+    justify-content: center
 input
   &.invalid
     border-bottom: 1px solid tomato

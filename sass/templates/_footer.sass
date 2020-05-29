@@ -4,7 +4,7 @@
   padding-top: 3rem
   margin-top: -2.9rem
   &__wrap
-    background-color: $black
+    background: $black url('../img/bg-lines.webp') no-repeat center / cover
     max-width: 63.07rem
     margin: 0 12.14rem 0 13.57rem
     margin-bottom: 2.214rem
@@ -58,6 +58,9 @@
       line-height: 2rem
       color: $primary
       max-width: 39.14rem
+      & a
+        color: $primary
+        text-decoration: none
     &-icon
       margin-right: 0.6rem
   &__icon
@@ -68,3 +71,5 @@
     min-height: 33.2rem
     margin: auto
     margin-bottom: 4.8rem
+    filter: grayscale(100%)
+  
